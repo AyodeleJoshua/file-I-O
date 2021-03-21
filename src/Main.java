@@ -7,6 +7,8 @@ public class Main {
             config = new Config("config-staging.txt");
         } else if (args[0].trim().toLowerCase().equals("development")) {
             config = new Config("config-dev.txt");
+        } else {
+           config = new Config("config.txt");
         }
 
         System.out.println(config.get("application.name"));
